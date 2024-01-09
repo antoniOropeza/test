@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIDERAZGO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../data/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+        #resultado {
+            display: none;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media(max-width:600px){
+            .texto1{
+                font-size:14px;
+                position: absolute;
+                top:80px;
+                text-align:center;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+                right: 5px;
+                left: 5px;
+            }
+            .texto2{
+                font-size:14px;
+                position: absolute;
+                top:80px;
+                text-align:center;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+                right: 5px;
+                left: 5px;
+            }
+            .texto3{
+                font-size:14px;
+                position: absolute;
+                top:80px;
+                text-align:center;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+                right: 5px;
+                left: 5px;
+            }
+
+            #continua{
+        text-align: center;
+        margin-top: 0px;
+        
+      }
+    }
+
+        @media(max-width:2560px) and (min-width:601px){
+            .texto1{
+                font-size:17px;
+                position: absolute;
+                top:20%;
+                left: 50%;
+                right: 10%;
+                text-align:right;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+            }
+            .texto2{
+                font-size:17px;
+                position: absolute;
+                top:20%;
+                left: 55%;
+                right: 10%;
+                text-align:right;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+            }
+            .texto3{
+                font-size:17px;
+                position: absolute;
+                top:20%;
+                left: 50%;
+                right: 10%;
+                text-align:right;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+            }
+
+            #continua{
+        text-align: center;
+        margin-top: 5%;
+       font-size: 5px;
+
+      }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="resultado">
+                    <span id="puntaje"></span>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                 <picture id="imagen1">
+                  <source media="(max-width: 600px)" srcset="../data/img/NecesitasMejorarcel.jpg">
+                  <source media="(max-width: 2560px) and (min-width:601px)" srcset="../data/img/NecesitasMejorar.jpg">
+                  <img class="responsive-img img-fluid">
+                 </picture>
+                 <picture id="imagen2">
+                  <source media="(max-width: 600px)" srcset="../data/img/VasporbuenCaminocel.jpg">
+                  <source media="(max-width: 2560px) and (min-width:601px)" srcset="../data/img/VasporbuenCamino.jpg">
+                  <img class="responsive-img img-fluid">
+                 </picture>
+                 <picture id="imagen3">
+                  <source media="(max-width: 600px)" srcset="../data/img/Felicidadescel.jpg">
+                  <source media="(max-width: 2560px) and (min-width:601px) " srcset="../data/img/Felicidades.jpg">
+                  <img class="responsive-img img-fluid">
+                 </picture>
+
+                <img id="imagen1" class="responsive-img img-fluid d-none" src="../data/img/NecesitasMejorar.jpg" alt="Imagen 1">
+                <img id="imagen2" class="responsive-img img-fluid d-none" src="../data/img/VasporbuenCamino.jpg" alt="Imagen 2">
+                <img id="imagen3" class="responsive-img img-fluid d-none" src="../data/img/Felicidades.jpg" alt="Imagen 3">
+
+                    </div>
+                </div>
+                <script>
+                    var respuesta1 = localStorage.getItem('resultado1');
+                    var respuesta2 = localStorage.getItem('resultado2');
+                    var respuesta3 = localStorage.getItem('resultado3');
+                    var respuesta4 = localStorage.getItem('resultado4');
+                    var respuesta5 = localStorage.getItem('resultado5');
+
+                    respuesta1 = parseInt(respuesta1);
+                    respuesta2 = parseInt(respuesta2);
+                    respuesta3 = parseInt(respuesta3);
+                    respuesta4 = parseInt(respuesta4);
+                    respuesta5 = parseInt(respuesta5);
+
+                    var puntaje = respuesta1 + respuesta2 + respuesta3 + respuesta4 + respuesta5;
+
+                    document.getElementById('puntaje').textContent = puntaje;
+
+                    // Oculta todas las imágenes
+                    document.getElementById('imagen1').style.display = 'none';
+                    document.getElementById('imagen2').style.display = 'none';
+                    document.getElementById('imagen3').style.display = 'none';
+
+                    if (puntaje >= 5 && puntaje <= 7) {
+                        document.getElementById('imagen1').style.display = 'block';
+                        document.write('<p class="texto1">Tu puntuación indica que hay espacio para mejorar tus habilidades de liderazgo. Es importante recordar que el liderazgo transformacional se trata de inspiración y motivación. En situaciones desafiantes, es fundamental adoptar un enfoque más comprensivo y colaborativo. Trabajar en la comunicación asertiva y en la gestión de conflictos puede ser beneficioso para ti. Considera también la importancia de reconocer y celebrar los logros de tu equipo para mantener la moral alta.</p>');
+                    } else if (puntaje >= 8 && puntaje <= 11) {
+                        document.getElementById('imagen2').style.display = 'block';
+                        document.write('<p class="texto2">Obtuviste una puntuación aceptable, lo que demuestra que tienes un entendimiento básico de las prácticas de liderazgo. Sin embargo, aún puedes mejorar y pulir tus habilidades. Trata de ser más proactivo en la resolución de conflictos y en el apoyo a los miembros de tu equipo. Considera cómo puedes fortalecer tus habilidades de comunicación y liderar con un enfoque más centrado en el equipo.</p>');
+                    } else if (puntaje >= 12 && puntaje <= 15) {
+                        document.getElementById('imagen3').style.display = 'block';
+                        document.write('<p class=texto3>Tu puntuación refleja un sólido entendimiento de las prácticas de liderazgo transformacional. Demuestras la capacidad de liderar con empatía, comunicación asertiva y resolución de conflictos. Sigues un enfoque colaborativo y reconoces la importancia de celebrar los logros de tu equipo. Continúa cultivando estas habilidades y liderarás con éxito en tu rol. No obstante, siempre hay espacio para el crecimiento y la mejora continua, así que busca oportunidades para seguir desarrollándote como líder.</p>');
+                    }
+                </script>
+                  <div id="continua">
+                    <a href="https://sicaviqa.imss.gob.mx/login/index.php"  class="btn btn-custom-color " role="button" >Continua Evaluacion</a>
+                  </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

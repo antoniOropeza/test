@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LIDERAZGO</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
+      <style>
+          body {
+              background-image: url('../data/img/Liderazgosinnube.gif'); 
+              background-size: cover;
+              background-position: center;
+              height: 100vh;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-repeat: no-repeat;
+              color:black;
+          }
+          .texto-centrado {
+              text-align:center;
+              font-family: 'Monserrat Bold' ,sans-serif;
+              text-align: justify; 
+          }
+          .badge {
+              transition: background-color 0.3s ease;
+          }
+  
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+          h1{
+              margin-top: 80px;
+          }
+          p{
+              margin-top: 20px;
+          }
+  
+          #text {
+           font-size: 10px;
+           margin-left: 20px;
+          }
+         
+        
+          @media(min-width:375px){
+              body {
+              background-image: url('../data/img/LiderazMOVILsinnube.gif'); 
+              background-size: contain;
+              background-position: center;
+             
+          }
+          #text{
+              font-size: 12px;
+              margin-left: 40px;
+               
+          }
+          #pregunta{
+              font-size: 15px;
+              margin-top: -120px;
+              margin-left: 40px;
+              font-weight: 900;
+          }
+      
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 8px;
+              margin-left: 20px;
+        
+          }
+          #boton2{
+              font-size: 8px;
+              margin-left: 20px;
+          }
+          #boton3{
+              font-size: 8px;
+              margin-left: 20px;
+          }
+  
+          #imagen{
+              width: 15%;
+              height: 15%;
+          }
+          #imagen2{
+              width: 10%;
+              height: 10%;
+          }
+          #imagen3{
+              width: 10%;
+              height: 10%;
+          }
+  
+          }
+  
+          @media(min-width:320px){
+              body {
+              background-image: url('../data/img/LiderazMOVILsinnube.gif'); 
+              background-size: contain;
+              background-position: center;
+          }
+          #text{
+              font-size: 10px;
+              margin-left: 20px;
+  
+          }
+  
+          #pregunta{
+              font-size: 15px;
+              margin-top: -120px;
+              margin-left: 20px;
+              font-weight: 900;
+          }
+  
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 8px;
+              
+          
+          }
+          #boton2{
+              font-size: 8px;
+             
+          }
+          #boton3{
+              font-size: 8px;
+          }
+  
+          #imagen{
+              width: 15%;
+              height: 15%;
+          }
+          #imagen2{
+              width: 10%;
+              height: 10%;
+          }
+          #imagen3{
+              width: 10%;
+              height: 10%;
+          }
+          }
+  
+          @media(max-width:425px){
+              body {
+              background-image: url('../data/img/LiderazMOVILsinnube.gif'); 
+              background-size: contain;
+              background-position: center;
+          }
+          #text{
+              font-size: 10px;
+              margin-left: 20px;
+             
+          }
+  
+          #pregunta{
+              font-size: 15px;
+              margin-top: -140px;
+              margin-left: 20px;
+              font-weight: 900;
+          }
+       
+  
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 8px;
+              margin-left: 10px
+              ;
+          
+          }
+          #boton2{
+              font-size: 8px;
+              margin-left: 10px;
+          }
+          #boton3{
+              font-size: 8px;
+              margin-left: 10px;
+          }
+  
+          #imagen{
+              width: 12%;
+              height: 12%;
+          }
+          #imagen2{
+              width: 10%;
+              height: 10%;
+          }
+          #imagen3{
+              width: 10%;
+              height: 10%;
+          }
+          }
+  
+          @media(min-width:768px){
+              body {
+              background-image: url('../data/img/Liderazgosinnube.gif'); 
+              background-size: contain;
+              background-position: center;
+          }
+          #text{
+              font-size: 10px;
+              margin-left: 20px;
+             
+          }
+  
+          #pregunta{
+              font-size: 15px;
+              margin-top: 100px;
+              margin-left: 20px;
+              font-weight: 900;
+          }
+       
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 7px;
+              margin-left: 10px;
+          }
+          #boton2{
+              font-size: 7px;
+              margin-left: 10px;
+          }
+          #boton3{
+              font-size: 7px;
+              margin-left: 10px;
+          }
+          #imagen{
+              width: 10%;
+          }
+  
+      
+          }
+  
+          @media(min-width:1024px){
+            body {
+            background-image: url('../data/img/Liderazgosinnube.gif'); 
+            background-size: contain;
+            background-position: center;
+         
+        }
+        #text{
+            font-size: 15px;
+            margin-left: 80px;
+            
+        }
+
+        #pregunta{
+            font-size: 20px;
+            margin-top: 100px;
+            margin-left: 80px;
+            font-weight: 900;
+        }
+     
+        .badge:hover {
+            background-color:#B3B6B7; 
+            cursor: pointer;
+        }
+
+        #boton1{
+            font-size: 20px;
+            margin-left: 80px;
+        }
+        #boton2{
+            font-size: 20px;
+            margin-left: 80px;
+        }
+        #boton3{
+            font-size: 20px;
+            margin-left: 80px;
+        }
+        }
+  
+        @media(min-width:1440px){
+            body {
+            background-image: url('../data/img/Liderazgosinnube.gif'); 
+            background-size: contain;
+            background-position: center;
+        }
+        #text{
+            font-size: 20px;
+            margin-left: 30px;
+        }
+
+        #pregunta{
+            font-size: 25px;
+            margin-top: 50px;
+            margin-left: 30px;
+            font-weight: 900;
+        }
+    
+        .badge:hover {
+            background-color:#B3B6B7; 
+            cursor: pointer;
+        }
+
+        #boton1{
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        #boton2{
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        #boton3{
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        }
+  
+          @media(min-width:1920px){
+              body {
+              background-image: url('../data/img/Liderazgosinnube.gif'); 
+              background-size: cover;
+              background-position: center;
+          }
+          #text{
+              font-size: 28px;
+              margin-left: -200px;
+          }
+  
+          #pregunta{
+              font-size: 35px;
+              margin-top: 50px;
+              margin-left: -200px;
+              font-weight: 900;
+          }
+       
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 25px;
+              margin-left: -220px;
+          }
+          #boton2{
+              font-size: 22px;
+              margin-left: -220px;
+          }
+          #boton3{
+              font-size: 22px;
+              margin-left: -220px;
+          }
+          }
+  
+          @media(min-width:2560px){
+              body {
+              background-image: url('../data/img/Liderazgosinnube.gif'); 
+              background-size: cover;
+              background-position: center;
+         
+          }
+          #text{
+              font-size: 35px;
+              margin-left: -450px;
+            
+          }
+  
+          #pregunta{
+              font-size: 40px;
+              margin-top: 50px;
+              margin-left: -450px;
+              font-weight: 900;
+          }
+        
+          .badge:hover {
+              background-color:#B3B6B7; 
+              cursor: pointer;
+          }
+  
+          #boton1{
+              font-size: 30px;
+              margin-left: -450px;
+          }
+          #boton2{
+              font-size: 30px;
+              margin-left: -450px;
+          }
+          #boton3{
+              font-size: 30px;
+              margin-left: -450px;
+          }
+  
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container texto-centrado">
+          <h1 id="pregunta" class="fw-bold">PREGUNTA 3</h1>
+          <p id="text">
+            Durante una reunión, surgen desacuerdos entre Pedro y otro miembro del equipo que
+            están afectando<br> el progreso del proyecto. ¿Cómo lo manejas?
+          </p>
+          <div class="d-grid gap-2 col-10 col-md-6 justify-content-center justify-content-md-center">
+            <div id="boton1" class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3 mt-3" style="text-align: left;" onclick="enviarRespuesta(3);">
+                <img id="imagen" class="rounded-circle me-1" width="60" height="60" src="../data/img/P12.png" alt="Opción 1"> 
+                <span style="white-space: normal;">Facilitas una conversación constructiva entre Pedro y el otro miembro para resolver el conflicto de manera colaborativa.</span>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-10 col-md-6 justify-content-center justify-content-md-center">
+            <div id="boton2" class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3" style="text-align: left;" onclick="enviarRespuesta(2);">
+                <img id="imagen" class="rounded-circle me-1" width="60" height="60" src="../data/img/P22.png" alt="Opción 1"> 
+                <span style="white-space: normal;">Escuchas ambas perspectivas, pero evitas involucrarte
+                    demasiado en la disputa.</span>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-10 col-md-6 justify-content-center justify-content-md-center">
+            <div id="boton3" class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3" style="text-align: left;" onclick="enviarRespuesta(1);">
+                <img id="imagen" class="rounded-circle me-1" width="60" height="60" src="../data/img/P32.png" alt="Opción 1"> 
+                <span style="white-space: normal;">Tomas partido por uno de ellos y culpas al otro por los problemas.</span>
+            </div>
+        </div>
+        
+    
+          </div>
+      <script>
+          function enviarRespuesta(puntos) {
+              localStorage.setItem('resultado3', puntos);
+              window.location.href = 'PREGUNTA 4.html';
+          }
+      </script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

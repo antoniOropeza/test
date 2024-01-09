@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../data/css/style.css"/>
+    <script src="../index/funciones.js"></script>
+    <title></title>
+    <style>
+        
+
+        @media(min-width:1020px){
+            body{
+                background-image: url('../data/img/Fondo.jpg ');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color:black;
+            }
+
+            .maquina{
+              float: right;
+              margin-left: 760px;
+              margin-top:-220px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+<div class="container-fluid">
+    <h1>El Colgado</h1>
+    <img id="imagen" src="..\data\img\img0.png">
+    <div>
+         <div id="letras">
+        <div class="maquina">
+            <p id="palabradivinar"></p>
+            <div class="primer_gr row">
+                <button type="button" class="btn btn-custom-color2 ">Q</button>
+                <button type="button" class="btn btn-custom-color2 ">W</button>
+                <button data-letra="e" type="button" class="btn btn-custom-color2 ">E</button>
+                <button type="button" class="btn btn-custom-color2 ">R</button>
+                <button type="button" class="btn btn-custom-color2 ">T</button>
+                <button type="button" class="btn btn-custom-color2 ">Y</button>
+                <button type="button" class="btn btn-custom-color2 ">U</button>
+                <button type="button" class="btn btn-custom-color2 ">I</button>
+                <button type="button" class="btn btn-custom-color2 ">O</button>
+                <button type="button" class="btn btn-custom-color2 ">P</button>
+            </div>
+            <br>
+            <div class="segundo_gr row">
+                <button type="button" class="btn btn-custom-color2 ">A</button>
+                <button type="button" class="btn btn-custom-color2 ">S</button>
+                <button type="button" class="btn btn-custom-color2 ">D</button>
+                <button type="button" class="btn btn-custom-color2 ">F</button>
+                <button type="button" class="btn btn-custom-color2 ">G</button>
+                <button type="button" class="btn btn-custom-color2 ">H</button>
+                <button type="button" class="btn btn-custom-color2 ">J</button>
+                <button type="button" class="btn btn-custom-color2 ">K</button>
+                <button type="button" class="btn btn-custom-color2 ">L</button>
+                <button type="button" class="btn btn-custom-color2 ">Ñ</button>
+            </div>
+            <br>
+            <div class="tercer_gr row">
+                <button type="button" class="btn btn-custom-color2 ">Z</button>
+                <button type="button" class="btn btn-custom-color2 ">X</button>
+                <button type="button" class="btn btn-custom-color2 ">C</button>
+                <button type="button" class="btn btn-custom-color2 ">V</button>
+                <button type="button" class="btn btn-custom-color2 ">B</button>
+                <button data-letra="n" type="button" class="btn btn-custom-color2 ">N</button>
+                <button type="button" class="btn btn-custom-color2">M</button>
+            </div>
+        </div>
+    </div>
+        <p id="resultado"></p>
+        <img id='maquina' src="..\data\img\maquina.png">
+        <br>
+        <br>
+    </div>
+    <div id="botones">
+        <button class="zoom-button" id="jugar" onclick="mostrar();">Obtener palabra</button>
+        <button id="comodin" class="zoom-button oculto" onclick="activarComodin();">Comodin</button>
+    </div>
+    <p id="texto">La lista de trabajadores y puestos de base agrupados y ordenados por categorías de forma ascendente ¿Cómo se le llama?</p>
+    <script src="..\index\juego 4.js"></script>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popup-palabra" class="popup-palabra"></p>
+            <img src="" id="popup-image" alt="Resultado del juego" />
+            <button id="cerrar-popup" class="siguiente-button" onclick="cerrarPopup();">
+                <a class="nav-link btn-outline" href="PREGUNTA 5.html" style="color: white; text-decoration: none;">Siguiente</a>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

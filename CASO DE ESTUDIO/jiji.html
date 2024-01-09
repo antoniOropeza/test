@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CASO DE ESTUDIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inicializa la variable para almacenar la suma total.
+        var sumaTotal = 0;
+
+        // Función para sumar un valor al total y actualizar el resultado.
+        function sumarValor(valor) {
+            sumaTotal += valor;
+            document.getElementById("resultadoTotal").textContent = "Resultado Total: " + sumaTotal;
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-4">
+        <div style="background: #FFFFFF; font-size: 130%;  margin-left: 5%; margin-right: 10%; color: #000000;">
+            <label>LIDERAZGO</label>
+            <br>
+            <label>CASO PRÁCTICO</label>
+            <br>
+            </div>
+            <div style="background: #FFFFFF; font-size: 130%; text-align: center; margin-left: 5%; margin-right: 10%; color: #000000;">
+            <label for="respuesta1"> PREGUNTA 1
+                <br> En una reunión de equipo, Pedro presenta una idea que no está relacionada con el tema. ¿Qué haces?
+            </label>
+            <button onclick="sumarValor(1);">Lo ridiculizas públicamente y le dices que es una idea terrible.</button>
+            <br>
+            <button onclick="sumarValor(2);">Le haces saber tus preocupaciones de manera respetuosa y le sugieres algunas ideas.</button>
+            <button onclick="sumarValor(3);">Agradeces su contribución y le pides que desarrolle una idea para entenderla mejor.</button>
+            <br>
+            <img src="Buho-gif.gif" width="30%" height="30%"></img>
+            </div>
+        
+        <div style="background: #FFFFFF; font-size: 130%; text-align: center; margin-left: 5%; margin-right: 10%; color: #000000;">
+            <br>
+            <label for="respuesta2"> PREGUNTA 2
+                <br> Pedro ha estado llegando tarde con frecuencia afectando la proactividad del equipo. ¿Cómo abordas la situación?
+            </label>
+            <button onclick="sumarValor(2);">Tienes una conversación privada con él para entender las razones detrás de su tardanza y explorar soluciones.</button>
+            <button onclick="sumarValor(1);">Lo amenazas con despedirlo si no mejora su puntualidad de inmediato.</button>
+            <button onclick="sumarValor(3);">Ignoras la situación y esperas que mejore por sí sola.</button>
+            <br>
+            <img src="Buho-gif.gif" width="30%" height="30%"></img>
+        </div>
+        <div style="background: #FFFFFF; font-size: 130%; text-align: center; margin-left: 5%; margin-right: 10%; color: #000000;">
+            <br>
+            <label for="respuesta3"> PREGUNTA 3
+                <br> Durante una reunión, surgen desacuerdos entre Pedro y otro miembro del equipo que están afectando el progreso del proyecto. ¿Cómo lo manejas?
+            </label>
+            <button onclick="sumarValor(3);">Facilitas una conversación constructiva entre Pedro y el otro miembro para resolver el conflicto de manera colaborativa.</button>
+            <button onclick="sumarValor(2);">Escuchas ambas perspectivas, pero evitas involucrarte demasiado en la disputa.</button>
+            <button onclick="sumarValor(1);">Tomas partido por uno de ellos y culpas al otro por los problemas.</button>
+            <br>
+            <img src="Buho-gif.gif" width="30%" height="30%"></img>
+        </div>
+        <div style="background: #FFFFFF; font-size: 130%; text-align: center; margin-left: 5%; margin-right: 10%; color: #000000;">        
+        <br>
+            <label for="respuesta4"> PREGUNTA 4
+            <br>Tu equipo ha alcanzado un objetivo importante. ¿Cómo celebras el logro?</label>
+            <button onclick="sumarValor(3);">Organizas una pequeña celebración o reconocimiento para mostrar tu aprecio por su arduo trabajo, incluyendo a Pedro.</button>
+            <button onclick="sumarValor(1);">No haces nada, ya que consideras que cumplir con los objetivos es su deber.</button>
+            <button onclick="sumarValor(2);">Agradeces brevemente a tu equipo por su trabajo y sigues adelante.</button>
+            <br>
+            <img src="Buho-gif.gif" width="30%" height="30%"></img>
+        </div>
+            <div style="background: #FFFFFF; font-size: 130%; text-align: center; margin-left: 5%; margin-right: 10%; color: #000000;">
+            <label for="respuesta5"> PREGUNTA 5
+                <br>Te das cuenta de que se ha cometido un error en la asignación de tareas y Pedro está sobrecargado de trabajo debido a esto. ¿Cómo rectificas la situación?
+            </label>
+            <button onclick="sumarValor(1);">Culpas a Pedro por no haber dicho nada antes.</button>
+            <button onclick="sumarValor(3);">Hablas con Pedro, te disculpas por el error y redistribuyes las tareas de manera justa y equitativa.</button>
+            <button onclick="sumarValor(2);">Le pides que aguante un poco más y prometes compensarlo en el futuro.</button>
+            <img src="Buho-gif.gif" width="30%" height="30%"></img>
+
+            
+
+
+
+        <div class="text-center mt-4">
+            <p id="resultadoTotal"></p>
+        </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIDERAZGO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
+    <style>
+               body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        } 
+        .texto-centrado {
+            text-align:center;
+            font-family: 'Monserrat Bold' ,sans-serif;
+            text-align: justify;
+             
+        }
+
+
+
+ @media(max-width:600px) {
+    body {
+            background-image: url('../data/img/LiderazgoMOVILconnubeok.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+            #texto{
+                font-size:10px;
+                position: absolute;
+                top:70px;
+                text-align:center;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+                right: 25%;
+                left: 25%;
+            }
+          
+            #deacuerdo{
+        text-align: center;
+        margin-top: 120%;
+        font-size: 20px;
+        padding: .1px 10px;
+        margin-left: 15%;
+      }
+    }
+@media(max-width:1024px) and (min-width:768px){
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+
+        #texto{
+                font-size: 11px;
+                position: absolute;
+                top:32%;
+                left: 15%;
+                right: 45%;
+                text-align:right;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+            }
+
+            #deacuerdo{
+        text-align: center;
+        margin-top: 36%;
+        font-size: 25px;
+        padding: .1px 20px;
+        margin-left: 25%;
+      }
+
+
+}
+
+ @media(max-width:2560px) and (min-width:1025px) { 
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+
+        #texto{
+                font-size: 17px;
+                position: absolute;
+                top:28%;
+                left: 20%;
+                right: 45%;
+                text-align:right;
+                font-family: 'Monserrat Bold' ,sans-serif;
+                text-align: justify;
+            }
+
+            #deacuerdo{
+        text-align: center;
+        margin-top: 32%;
+        font-size: 30px;
+        padding: .1px 20px;
+        margin-left: 30%;
+      }
+
+} 
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="texto-centrado">
+            <p id="texto">Imagina que eres líder en una Dirección dentro del Instituto Mexicano del Seguro Social, que
+                tienes que entregar un trabajo muy importante y, para ello, cuentas con un equipo de trabajo.
+                <br><br>Han
+                estado trabajando duro para cumplir con un importante plazo de entrega de un proyecto. Uno de los
+                integrantes del equipo de trabajo, Pedro, ha estado enfrentando dificultades personales en casa y ha
+                estado llegando tarde al trabajo con regularidad durante las últimas semanas. Esto ha empezado a afectar
+                el progreso del proyecto y la moral del equipo.
+                <br><br>Ahora, te enfrentas a la tarea de abordar la
+                situación y tomar medidas para mantener el proyecto en marcha y apoyar a Pedro. Ten en cuenta esta
+                situación al responder las siguientes preguntas.
+            </p>
+            <div class="texto-right" id="boton-container" style="display: none;">
+                <a id="deacuerdo" href="PREGUNTA 1.html" class="btn btn-custom-color " role="button">¡De acuerdo!</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function mostrarLetras() {
+            var textoElemento = document.getElementById("texto");
+            var textoOriginal = textoElemento.textContent;
+            var letras = textoOriginal.split("");
+            var textoMostrado = "";
+            var i = 0;
+    
+            function mostrarSiguienteLetra() {
+                textoMostrado += letras[i];
+                textoElemento.textContent = textoMostrado;
+                i++;
+    
+                if (i < letras.length) {
+                    setTimeout(mostrarSiguienteLetra, 5); // Ajusta el tiempo de retraso aquí (en milisegundos)
+                } else {
+                    textoElemento.textContent = textoOriginal; // Restaura el contenido original
+                    document.getElementById("boton-container").style.display = "block";
+                }
+            }
+    
+            mostrarSiguienteLetra();
+        }
+    
+        window.onload = function () {
+            mostrarLetras();
+        };
+    </script>
+    
+  
+</body>
+
+</html>

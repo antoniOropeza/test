@@ -1,0 +1,11 @@
+.btn-custom-color{
+  background-color: #455A64;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 2px 70px;
+  font-size: 40px;
+  font-family: 'Monserrat Bold' ,sans-serif;
+  border:none;
+  text-decoration: none;
+}
