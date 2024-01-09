@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
     <style>
-               body {
+        body {
             background-image: url('../data/img/Liderazgoconnube.gif'); 
             background-size: cover;
             background-position: center;
@@ -24,10 +24,7 @@
             text-align:center;
             font-family: 'Monserrat Bold' ,sans-serif;
             text-align: justify;
-             
         }
-
-
 
  @media(max-width:600px) {
     body {
@@ -45,7 +42,7 @@
             #texto{
                 font-size:10px;
                 position: absolute;
-                top:70px;
+                top:150px;
                 text-align:center;
                 font-family: 'Monserrat Bold' ,sans-serif;
                 text-align: justify;
@@ -55,12 +52,13 @@
           
             #deacuerdo{
         text-align: center;
-        margin-top: 120%;
+        margin-top: 180%;
         font-size: 20px;
         padding: .1px 10px;
         margin-left: 15%;
       }
     }
+
 @media(max-width:1024px) and (min-width:768px){
     body {
             background-image: url('../data/img/Liderazgoconnube.gif'); 
@@ -86,15 +84,13 @@
                 text-align: justify;
             }
 
-            #deacuerdo{
+        #deacuerdo{
         text-align: center;
         margin-top: 36%;
         font-size: 25px;
         padding: .1px 20px;
         margin-left: 25%;
       }
-
-
 }
 
  @media(max-width:2560px) and (min-width:1025px) { 
@@ -122,14 +118,13 @@
                 text-align: justify;
             }
 
-            #deacuerdo{
+        #deacuerdo{
         text-align: center;
         margin-top: 32%;
         font-size: 30px;
         padding: .1px 20px;
         margin-left: 30%;
       }
-
 } 
     </style>
 </head>
@@ -150,7 +145,6 @@
             </div>
         </div>
     </div>
-    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
           const texto = document.getElementById("texto");
@@ -163,12 +157,9 @@
               if (i === textoContenido.length - 1) {
                 document.getElementById("boton-container").style.display = "block";
               }
-            }, 20 * i);
+            }, 50 * i);
           }
         });
       </script>
-    
-  
 </body>
-
 </html>
