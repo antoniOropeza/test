@@ -138,13 +138,11 @@
         <div class="texto-centrado">
             <p id="texto">Imagina que eres líder en una Dirección dentro del Instituto Mexicano del Seguro Social, que
                 tienes que entregar un trabajo muy importante y, para ello, cuentas con un equipo de trabajo.
-                <br><br>Han
-                estado trabajando duro para cumplir con un importante plazo de entrega de un proyecto. Uno de los
+                Han estado trabajando duro para cumplir con un importante plazo de entrega de un proyecto. Uno de los
                 integrantes del equipo de trabajo, Pedro, ha estado enfrentando dificultades personales en casa y ha
                 estado llegando tarde al trabajo con regularidad durante las últimas semanas. Esto ha empezado a afectar
                 el progreso del proyecto y la moral del equipo.
-                <br><br>Ahora, te enfrentas a la tarea de abordar la
-                situación y tomar medidas para mantener el proyecto en marcha y apoyar a Pedro. Ten en cuenta esta
+                Ahora, te enfrentas a la tarea de abordar la situación y tomar medidas para mantener el proyecto en marcha y apoyar a Pedro. Ten en cuenta esta
                 situación al responder las siguientes preguntas.
             </p>
             <div class="texto-right" id="boton-container" style="display: none;">
@@ -154,33 +152,21 @@
     </div>
     
     <script>
-        function mostrarLetras() {
-            var textoElemento = document.getElementById("texto");
-            var textoOriginal = textoElemento.textContent;
-            var letras = textoOriginal.split("");
-            var textoMostrado = "";
-            var i = 0;
-    
-            function mostrarSiguienteLetra() {
-                textoMostrado += letras[i];
-                textoElemento.textContent = textoMostrado;
-                i++;
-    
-                if (i < letras.length) {
-                    setTimeout(mostrarSiguienteLetra); // Ajusta el tiempo de retraso aquí (en milisegundos)
-                } else {
-                    textoElemento.textContent = textoOriginal; // Restaura el contenido original
-                    document.getElementById("boton-container").style.display = "block";
-                }
-            }
-    
-            mostrarSiguienteLetra();
-        }
-    
-        window.onload = function () {
-            mostrarLetras();
-        };
-    </script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const texto = document.getElementById("texto");
+          const textoContenido = texto.innerHTML;
+          texto.innerHTML = "";
+      
+          for (let i = 0; i < textoContenido.length; i++) {
+            setTimeout(function() {
+              texto.innerHTML += textoContenido[i];
+              if (i === textoContenido.length - 1) {
+                document.getElementById("boton-container").style.display = "block";
+              }
+            }, 50 * i);
+          }
+        });
+      </script>
     
   
 </body>
