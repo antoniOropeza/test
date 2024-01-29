@@ -3,7 +3,7 @@ let cant_errores = 0; //cuantas veces me equivoqué
 let cant_aciertos = 0; //cuantas letras acerté
 let comodinActivado= false;
 
-const palabras = ['MATRICULA'];
+const palabras = ['TRANSPARENCIA'];
 const btn = id('jugar');
 const imagen = id( 'imagen' );
 const comodin = id('comodin');
